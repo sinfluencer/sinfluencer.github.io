@@ -17,18 +17,15 @@ body{font-family:'Poppins',sans-serif;background:#f9f9ff;color:#111;line-height:
 .logo{font-size:26px;font-weight:800;background:linear-gradient(45deg,#6a00ff,#ff00aa);-webkit-background-clip:text;color:transparent}
 .nav-links{display:flex;gap:30px;list-style:none}
 .nav-links a{text-decoration:none;color:#333;font-weight:500}
-.btn{padding:12px 28px;border-radius:50px;text-decoration:none;font-weight:600;transition:.3s}
+.btn{padding:12px 28px;border-radius:50px;text-decoration:none;font-weight:600}
 .btn-primary{background:linear-gradient(45deg,#6a00ff,#ff00aa);color:white}
-.btn-primary:hover{opacity:0.9}
+.btn-outline{padding:12px 28px;border-radius:50px;border:2px solid #ff00aa;color:#ff00aa;text-decoration:none;font-weight:600}
 
 .hero{padding:160px 0 100px;background:linear-gradient(135deg,#f3e8ff,#ffe6f7);text-align:center}
 .hero h1{font-size:48px;font-weight:800;margin-bottom:20px}
-.hero p{max-width:700px;margin:auto;color:#555;margin-bottom:30px}
 
 .role-select{padding:80px 0;text-align:center;background:white}
 .role-buttons{display:flex;justify-content:center;gap:30px;margin-top:30px;flex-wrap:wrap}
-.btn-outline{padding:12px 28px;border-radius:50px;border:2px solid #ff00aa;color:#ff00aa;text-decoration:none;font-weight:600}
-.btn-outline:hover{background:#ff00aa;color:white}
 
 .form-section{padding:80px 0;background:#f3f3ff}
 .form-box{background:white;padding:40px;border-radius:20px;max-width:600px;margin:auto;box-shadow:0 10px 30px rgba(0,0,0,0.05)}
@@ -37,27 +34,7 @@ body{font-family:'Poppins',sans-serif;background:#f9f9ff;color:#111;line-height:
 width:100%;padding:12px;margin-bottom:15px;border-radius:10px;border:1px solid #ddd;font-family:Poppins}
 .form-box button{width:100%;padding:12px;border:none;border-radius:50px;background:linear-gradient(45deg,#6a00ff,#ff00aa);color:white;font-weight:600}
 
-.stats{background:white;padding:80px 0;text-align:center}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.stat h2{color:#6a00ff;font-size:32px}
-
-.features{padding:100px 0;text-align:center}
-.features h2{font-size:36px;margin-bottom:60px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
-.card{background:white;padding:40px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.05);transition:.3s}
-.card:hover{transform:translateY(-10px)}
-
-.cta{background:linear-gradient(45deg,#6a00ff,#ff00aa);color:white;text-align:center;padding:100px 0}
-.cta h2{font-size:40px;margin-bottom:20px}
-
 footer{background:#111;color:#aaa;text-align:center;padding:40px 0}
-
-@media(max-width:992px){
-.nav-links{display:none}
-.grid{grid-template-columns:1fr}
-.stats-grid{grid-template-columns:1fr 1fr}
-.hero h1{font-size:34px}
-}
 </style>
 </head>
 
@@ -79,7 +56,6 @@ footer{background:#111;color:#aaa;text-align:center;padding:40px 0}
 <section class="hero">
 <div class="container">
 <h1>Drive Powerful Creator Marketing</h1>
-<p>Connect brands and creators in one powerful platform.</p>
 </div>
 </section>
 
@@ -118,7 +94,31 @@ footer{background:#111;color:#aaa;text-align:center;padding:40px 0}
 
 </form>
 
-<p id="successMessage" style="display:none;color:green;font-weight:600;margin-top:15px;">
+<p id="brandSuccess" style="display:none;color:green;font-weight:600;margin-top:15px;">
+Successfully Submitted ✅
+</p>
+
+</div>
+</section>
+
+<!-- CREATOR FORM -->
+<section class="form-section" id="creator-form">
+<div class="form-box">
+<h2>Creator Details</h2>
+
+<form action="https://formspree.io/f/mvzbjjyv" method="POST" id="creatorForm">
+
+<input type="text" name="creator_name" placeholder="Full Name" required>
+<input type="email" name="creator_email" placeholder="Email" required>
+<input type="text" name="platform" placeholder="Primary Platform (Instagram, YouTube...)" required>
+<input type="text" name="followers" placeholder="Followers Count" required>
+<textarea name="creator_message" rows="4" placeholder="Tell us about your content" required></textarea>
+
+<button type="submit">Join Now</button>
+
+</form>
+
+<p id="creatorSuccess" style="display:none;color:green;font-weight:600;margin-top:15px;">
 Successfully Submitted ✅
 </p>
 
@@ -130,24 +130,25 @@ Successfully Submitted ✅
 </footer>
 
 <script>
-const brandForm = document.getElementById("brandForm");
-
-brandForm.addEventListener("submit", async function(event){
+async function handleForm(formId, successId){
+const form = document.getElementById(formId);
+form.addEventListener("submit", async function(event){
 event.preventDefault();
-
-const data = new FormData(brandForm);
-
-const response = await fetch(brandForm.action, {
-method: brandForm.method,
+const data = new FormData(form);
+const response = await fetch(form.action, {
+method: form.method,
 body: data,
 headers: { 'Accept': 'application/json' }
 });
-
-if (response.ok) {
-brandForm.reset();
-document.getElementById("successMessage").style.display = "block";
+if(response.ok){
+form.reset();
+document.getElementById(successId).style.display="block";
 }
 });
+}
+
+handleForm("brandForm","brandSuccess");
+handleForm("creatorForm","creatorSuccess");
 </script>
 
 </body>
