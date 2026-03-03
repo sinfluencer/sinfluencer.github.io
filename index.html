@@ -12,7 +12,6 @@
 body{font-family:'Poppins',sans-serif;background:#f9f9ff;color:#111;line-height:1.6}
 .container{width:90%;max-width:1200px;margin:auto}
 
-/* NAVBAR */
 .navbar{position:fixed;width:100%;background:white;padding:20px 0;box-shadow:0 4px 15px rgba(0,0,0,0.05);z-index:1000}
 .nav-wrapper{display:flex;justify-content:space-between;align-items:center}
 .logo{font-size:26px;font-weight:800;background:linear-gradient(45deg,#6a00ff,#ff00aa);-webkit-background-clip:text;color:transparent}
@@ -22,18 +21,15 @@ body{font-family:'Poppins',sans-serif;background:#f9f9ff;color:#111;line-height:
 .btn-primary{background:linear-gradient(45deg,#6a00ff,#ff00aa);color:white}
 .btn-primary:hover{opacity:0.9}
 
-/* HERO */
 .hero{padding:160px 0 100px;background:linear-gradient(135deg,#f3e8ff,#ffe6f7);text-align:center}
 .hero h1{font-size:48px;font-weight:800;margin-bottom:20px}
 .hero p{max-width:700px;margin:auto;color:#555;margin-bottom:30px}
 
-/* BUTTON SECTION */
 .role-select{padding:80px 0;text-align:center;background:white}
 .role-buttons{display:flex;justify-content:center;gap:30px;margin-top:30px;flex-wrap:wrap}
 .btn-outline{padding:12px 28px;border-radius:50px;border:2px solid #ff00aa;color:#ff00aa;text-decoration:none;font-weight:600}
 .btn-outline:hover{background:#ff00aa;color:white}
 
-/* FORMS */
 .form-section{padding:80px 0;background:#f3f3ff}
 .form-box{background:white;padding:40px;border-radius:20px;max-width:600px;margin:auto;box-shadow:0 10px 30px rgba(0,0,0,0.05)}
 .form-box h2{text-align:center;margin-bottom:20px}
@@ -41,26 +37,21 @@ body{font-family:'Poppins',sans-serif;background:#f9f9ff;color:#111;line-height:
 width:100%;padding:12px;margin-bottom:15px;border-radius:10px;border:1px solid #ddd;font-family:Poppins}
 .form-box button{width:100%;padding:12px;border:none;border-radius:50px;background:linear-gradient(45deg,#6a00ff,#ff00aa);color:white;font-weight:600}
 
-/* STATS */
 .stats{background:white;padding:80px 0;text-align:center}
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .stat h2{color:#6a00ff;font-size:32px}
 
-/* FEATURES */
 .features{padding:100px 0;text-align:center}
 .features h2{font-size:36px;margin-bottom:60px}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
 .card{background:white;padding:40px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.05);transition:.3s}
 .card:hover{transform:translateY(-10px)}
 
-/* CTA */
 .cta{background:linear-gradient(45deg,#6a00ff,#ff00aa);color:white;text-align:center;padding:100px 0}
 .cta h2{font-size:40px;margin-bottom:20px}
 
-/* FOOTER */
 footer{background:#111;color:#aaa;text-align:center;padding:40px 0}
 
-/* RESPONSIVE */
 @media(max-width:992px){
 .nav-links{display:none}
 .grid{grid-template-columns:1fr}
@@ -88,8 +79,7 @@ footer{background:#111;color:#aaa;text-align:center;padding:40px 0}
 <section class="hero">
 <div class="container">
 <h1>Drive Powerful Creator Marketing</h1>
-<p>Connect brands and creators in one powerful platform. Launch campaigns, manage collaborations and track performance — all completely free.</p>
-<a href="#" class="btn btn-primary">Download Free</a>
+<p>Connect brands and creators in one powerful platform.</p>
 </div>
 </section>
 
@@ -103,96 +93,62 @@ footer{background:#111;color:#aaa;text-align:center;padding:40px 0}
 </div>
 </section>
 
+<!-- BRAND FORM -->
 <section class="form-section" id="brand-form">
 <div class="form-box">
 <h2>Brand Details</h2>
+
 <form action="https://formspree.io/f/mvzbjjyv" method="POST" id="brandForm">
-<input type="text" placeholder="First Name">
-<input type="text" placeholder="Last Name">
-<input type="email" placeholder="Work Email">
-<input type="text" placeholder="Company Name">
-<select>
-<option>Company Type</option>
+
+<input type="text" name="first_name" placeholder="First Name" required>
+<input type="text" name="last_name" placeholder="Last Name" required>
+<input type="email" name="email" placeholder="Work Email" required>
+<input type="text" name="company" placeholder="Company Name" required>
+
+<select name="company_type" required>
+<option value="">Company Type</option>
 <option>Startup</option>
 <option>Agency</option>
 <option>Enterprise</option>
 </select>
-<textarea rows="4" placeholder="How can we help you?"></textarea>
-<button>Submit</button>
+
+<textarea name="message" rows="4" placeholder="How can we help you?" required></textarea>
+
+<button type="submit">Submit</button>
+
 </form>
+
 <p id="successMessage" style="display:none;color:green;font-weight:600;margin-top:15px;">
 Successfully Submitted ✅
-</p> 
-</div>
-</section>
+</p>
 
-<section class="form-section" id="creator-form">
-<div class="form-box">
-<h2>Creator Details</h2>
-<input type="text" placeholder="Full Name">
-<input type="email" placeholder="Email">
-<input type="text" placeholder="Primary Platform (Instagram, YouTube...)">
-<input type="text" placeholder="Followers Count">
-<textarea rows="4" placeholder="Tell us about your content"></textarea>
-<button>Join Now</button>
-</div>
-</section>
-
-<section class="stats">
-<div class="container stats-grid">
-<div class="stat"><h2>50K+</h2><p>Creators</p></div>
-<div class="stat"><h2>10K+</h2><p>Brands</p></div>
-<div class="stat"><h2>120M+</h2><p>Reach</p></div>
-<div class="stat"><h2>4.9★</h2><p>Rating</p></div>
-</div>
-</section>
-
-<section class="features">
-<div class="container">
-<h2>Everything You Need</h2>
-<div class="grid">
-<div class="card">
-<h3>Creator Discovery</h3>
-<p>Find the right influencers based on niche, engagement and audience data.</p>
-</div>
-<div class="card">
-<h3>Campaign Management</h3>
-<p>Manage content approvals, contracts and payments in one dashboard.</p>
-</div>
-<div class="card">
-<h3>Performance Analytics</h3>
-<p>Track ROI and performance with real-time insights.</p>
-</div>
-</div>
-</div>
-</section>
-
-<section class="cta">
-<div class="container">
-<h2>Ready to Scale With SInfluencer?</h2>
-<br>
-<a href="#" class="btn" style="background:white;color:#6a00ff;">Get Started Free</a>
 </div>
 </section>
 
 <footer>
 <p>© 2026 SInfluencer. All Rights Reserved.</p>
 </footer>
+
 <script>
 const brandForm = document.getElementById("brandForm");
+
 brandForm.addEventListener("submit", async function(event){
-  event.preventDefault();
-  const data = new FormData(brandForm);
-  const response = await fetch(brandForm.action, {
-    method: brandForm.method,
-    body: data,
-    headers: { 'Accept': 'application/json' }
-  });
-  if (response.ok) {
-    brandForm.reset();
-    document.getElementById("successMessage").style.display = "block";
-  }
+event.preventDefault();
+
+const data = new FormData(brandForm);
+
+const response = await fetch(brandForm.action, {
+method: brandForm.method,
+body: data,
+headers: { 'Accept': 'application/json' }
+});
+
+if (response.ok) {
+brandForm.reset();
+document.getElementById("successMessage").style.display = "block";
+}
 });
 </script>
+
 </body>
 </html>
