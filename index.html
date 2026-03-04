@@ -12,6 +12,7 @@
 body{font-family:'Poppins',sans-serif;background:#f9f9ff;color:#111;line-height:1.6}
 .container{width:90%;max-width:1200px;margin:auto}
 
+/* NAVBAR */
 .navbar{position:fixed;width:100%;background:white;padding:20px 0;box-shadow:0 4px 15px rgba(0,0,0,0.05);z-index:1000}
 .nav-wrapper{display:flex;justify-content:space-between;align-items:center}
 .logo{font-size:26px;font-weight:800;background:linear-gradient(45deg,#6a00ff,#ff00aa);-webkit-background-clip:text;color:transparent}
@@ -21,19 +22,37 @@ body{font-family:'Poppins',sans-serif;background:#f9f9ff;color:#111;line-height:
 .btn-primary{background:linear-gradient(45deg,#6a00ff,#ff00aa);color:white}
 .btn-outline{padding:12px 28px;border-radius:50px;border:2px solid #ff00aa;color:#ff00aa;text-decoration:none;font-weight:600}
 
+/* HERO */
 .hero{padding:160px 0 100px;background:linear-gradient(135deg,#f3e8ff,#ffe6f7);text-align:center}
 .hero h1{font-size:48px;font-weight:800;margin-bottom:20px}
+.hero p{max-width:700px;margin:auto}
 
+/* ROLE BUTTONS */
 .role-select{padding:80px 0;text-align:center;background:white}
 .role-buttons{display:flex;justify-content:center;gap:30px;margin-top:30px;flex-wrap:wrap}
 
+/* FORMS */
 .form-section{padding:80px 0;background:#f3f3ff}
 .form-box{background:white;padding:40px;border-radius:20px;max-width:600px;margin:auto;box-shadow:0 10px 30px rgba(0,0,0,0.05)}
 .form-box h2{text-align:center;margin-bottom:20px}
-.form-box input, .form-box select, .form-box textarea{
+.form-box input,.form-box select,.form-box textarea{
 width:100%;padding:12px;margin-bottom:15px;border-radius:10px;border:1px solid #ddd;font-family:Poppins}
 .form-box button{width:100%;padding:12px;border:none;border-radius:50px;background:linear-gradient(45deg,#6a00ff,#ff00aa);color:white;font-weight:600}
 
+/* FEATURES */
+.features{padding:80px 0;background:white;text-align:center}
+.features-grid{display:flex;justify-content:center;gap:30px;flex-wrap:wrap}
+.card{background:white;padding:30px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,0.05);width:280px}
+
+/* STATS */
+.stats{padding:80px 0;background:#fafafa;text-align:center}
+.stats-grid{display:flex;justify-content:center;gap:50px;flex-wrap:wrap}
+.stat h2{font-size:32px;color:#6a00ff}
+
+/* CTA */
+.cta{padding:80px 0;text-align:center;background:linear-gradient(45deg,#6a00ff,#ff00aa);color:white}
+
+/* FOOTER */
 footer{background:#111;color:#aaa;text-align:center;padding:40px 0}
 </style>
 </head>
@@ -44,18 +63,22 @@ footer{background:#111;color:#aaa;text-align:center;padding:40px 0}
 <div class="container nav-wrapper">
 <div class="logo">SInfluencer</div>
 <ul class="nav-links">
-<li><a href="#">Platform</a></li>
-<li><a href="#">Creators</a></li>
-<li><a href="#">Pricing</a></li>
-<li><a href="#">Contact</a></li>
+<li><a href="#brand-form">Brands</a></li>
+<li><a href="#creator-form">Creators</a></li>
 </ul>
-<a href="#" class="btn btn-primary">Get Started</a>
+<a href="#brand-form" class="btn btn-primary">Get Started</a>
 </div>
 </header>
 
 <section class="hero">
 <div class="container">
 <h1>Drive Powerful Creator Marketing</h1>
+<p>
+SInfluencer connects brands with digital creators for authentic influencer marketing campaigns.
+</p>
+<br>
+<a href="#brand-form" class="btn btn-primary">Start Brand Campaign</a>
+<a href="#creator-form" class="btn-outline">Join As Creator</a>
 </div>
 </section>
 
@@ -82,6 +105,7 @@ footer{background:#111;color:#aaa;text-align:center;padding:40px 0}
 <input type="tel" name="phone" placeholder="Contact Number (Optional)">
 <input type="text" name="company" placeholder="Company Name" required>
 <input type="number" name="budget" placeholder="Campaign Budget (₹)" required>
+
 <select name="company_type" required>
 <option value="">Company Type</option>
 <option>Startup</option>
@@ -92,7 +116,6 @@ footer{background:#111;color:#aaa;text-align:center;padding:40px 0}
 <textarea name="message" rows="4" placeholder="How can we help you?" required></textarea>
 
 <button type="submit">Submit</button>
-
 </form>
 
 <p id="brandSuccess" style="display:none;color:green;font-weight:600;margin-top:15px;">
@@ -115,6 +138,7 @@ Successfully Submitted ✅
 <input type="text" name="platform" placeholder="Primary Platform link (Instagram, YouTube...)" required>
 <input type="text" name="followers" placeholder="Followers Count" required>
 <input type="number" name="budget" placeholder="Expected Budget (₹)" required>
+
 <textarea name="creator_message" rows="4" placeholder="Tell us about your content" required></textarea>
 
 <button type="submit">Join Now</button>
@@ -128,7 +152,71 @@ Successfully Submitted ✅
 </div>
 </section>
 
+<!-- FEATURES -->
+<section class="features">
+<div class="container">
+<h2>Why Creators Join SInfluencer</h2>
+
+<div class="features-grid">
+
+<div class="card">
+<h3>Brand Collaborations</h3>
+<p>Get discovered by brands and collaborate on marketing campaigns.</p>
+</div>
+
+<div class="card">
+<h3>Paid Campaigns</h3>
+<p>Work with brands and earn through influencer promotions.</p>
+</div>
+
+<div class="card">
+<h3>Grow Your Audience</h3>
+<p>Expand your reach by working with multiple brands.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+<div class="container stats-grid">
+
+<div class="stat">
+<h2>500+</h2>
+<p>Creators Joined</p>
+</div>
+
+<div class="stat">
+<h2>50+</h2>
+<p>Brands Interested</p>
+</div>
+
+<div class="stat">
+<h2>10M+</h2>
+<p>Total Audience Reach</p>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="cta">
+<div class="container">
+
+<h2>Partner With SInfluencer</h2>
+<p>For collaborations and partnerships contact us</p>
+
+<p style="font-weight:600;">
+sinfluencersofficial@gmail.com
+</p>
+
+</div>
+</section>
+
 <footer>
+<p><strong>SInfluencer</strong></p>
+<p>Creator Marketing Platform</p>
 <p>© 2026 SInfluencer. All Rights Reserved.</p>
 </footer>
 
@@ -138,11 +226,13 @@ const form = document.getElementById(formId);
 form.addEventListener("submit", async function(event){
 event.preventDefault();
 const data = new FormData(form);
-const response = await fetch(form.action, {
-method: form.method,
-body: data,
-headers: { 'Accept': 'application/json' }
+
+const response = await fetch(form.action,{
+method:form.method,
+body:data,
+headers:{'Accept':'application/json'}
 });
+
 if(response.ok){
 form.reset();
 document.getElementById(successId).style.display="block";
