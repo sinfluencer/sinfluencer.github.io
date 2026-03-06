@@ -3,225 +3,219 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SInfluencer | Creator Marketing Platform</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<title>SInfluencer</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',sans-serif;background:#f9f9ff;color:#111;line-height:1.6}
-.container{width:90%;max-width:1200px;margin:auto}
 
-/* NAVBAR */
-.navbar{position:fixed;width:100%;background:white;padding:20px 0;box-shadow:0 4px 15px rgba(0,0,0,0.05);z-index:1000}
-.nav-wrapper{display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:26px;font-weight:800;background:linear-gradient(45deg,#6a00ff,#ff00aa);-webkit-background-clip:text;color:transparent}
-.nav-links{display:flex;gap:30px;list-style:none}
-.nav-links a{text-decoration:none;color:#333;font-weight:500}
-.btn{padding:12px 28px;border-radius:50px;text-decoration:none;font-weight:600}
-.btn-primary{background:linear-gradient(45deg,#6a00ff,#ff00aa);color:white}
-.btn-outline{padding:12px 28px;border-radius:50px;border:2px solid #ff00aa;color:#ff00aa;text-decoration:none;font-weight:600}
-
-/* HERO */
-.hero{padding:160px 0 100px;background:linear-gradient(135deg,#f3e8ff,#ffe6f7);text-align:center}
-.hero h1{font-size:48px;font-weight:800;margin-bottom:20px}
-.hero p{max-width:700px;margin:auto}
-
-/* ROLE BUTTONS */
-.role-select{padding:80px 0;text-align:center;background:white}
-.role-buttons{display:flex;justify-content:center;gap:30px;margin-top:30px;flex-wrap:wrap}
-
-/* FORMS */
-.form-section{padding:80px 0;background:#f3f3ff}
-.form-box{background:white;padding:40px;border-radius:20px;max-width:600px;margin:auto;box-shadow:0 10px 30px rgba(0,0,0,0.05)}
-.form-box h2{text-align:center;margin-bottom:20px}
-.form-box input,.form-box select,.form-box textarea{
-width:100%;padding:12px;margin-bottom:15px;border-radius:10px;border:1px solid #ddd;font-family:Poppins}
-.form-box button{width:100%;padding:12px;border:none;border-radius:50px;background:linear-gradient(45deg,#6a00ff,#ff00aa);color:white;font-weight:600}
-
-/* FEATURES */
-.features{padding:80px 0;background:white;text-align:center}
-.features-grid{display:flex;justify-content:center;gap:30px;flex-wrap:wrap}
-.card{background:white;padding:30px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,0.05);width:280px}
-
-/* STATS */
-.stats{padding:80px 0;background:#fafafa;text-align:center}
-.stats-grid{display:flex;justify-content:center;gap:50px;flex-wrap:wrap}
-.stat h2{font-size:32px;color:#6a00ff}
-
-/* CTA */
-.cta{padding:80px 0;text-align:center;background:linear-gradient(45deg,#6a00ff,#ff00aa);color:white}
-
-/* FOOTER */
-footer{background:#111;color:#aaa;text-align:center;padding:40px 0} 
-@media (max-width:768px){
-
-.hero h1{
-font-size:34px;
-line-height:1.2;
+body{
+font-family:Arial, sans-serif;
+margin:0;
+background:#f7f7ff;
 }
 
-.hero p{
-font-size:15px;
-padding:0 10px;
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
 }
 
-.hero{
-padding:140px 20px 80px;
-}
-
-.hero a{
-display:block;
-width:100%;
-margin:10px 0;
-text-align:center;
-}
-
-.role-buttons{
-flex-direction:column;
-}
-
-.btn-primary,
-.btn-outline{
-width:100%;
-text-align:center;
+.navbar{
+background:white;
+padding:20px 0;
 }
 
 .nav-wrapper{
-flex-direction:column;
-gap:10px;
-}
-
-.nav-links{
-gap:15px;
-}
-
-.features-grid{
-flex-direction:column;
+display:flex;
+justify-content:space-between;
 align-items:center;
 }
 
-.card{
-width:90%;
+.logo{
+font-weight:bold;
+font-size:24px;
+color:#7b2cff;
 }
 
+.nav-links{
+list-style:none;
+display:flex;
+gap:20px;
+padding:0;
 }
+
+.nav-links a{
+text-decoration:none;
+color:#333;
+}
+
+.btn{
+padding:12px 25px;
+border-radius:30px;
+border:none;
+cursor:pointer;
+text-decoration:none;
+}
+
+.btn-primary{
+background:linear-gradient(90deg,#7b2cff,#ff00aa);
+color:white;
+}
+
+.btn-outline{
+border:2px solid #ff00aa;
+color:#ff00aa;
+padding:10px 22px;
+border-radius:30px;
+text-decoration:none;
+}
+
+.hero{
+text-align:center;
+padding:80px 0;
+background:#f2e6ff;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.form-section{
+padding:60px 20px;
+text-align:center;
+}
+
+.form-section form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,select,textarea{
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+button{
+padding:12px;
+border:none;
+background:#7b2cff;
+color:white;
+border-radius:8px;
+cursor:pointer;
+}
+
+.features{
+padding:80px 0;
+background:white;
+}
+
+.features-grid{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+width:260px;
+}
+
+.stats{
+background:#f2e6ff;
+padding:60px 0;
+}
+
+.stats-grid{
+display:flex;
+justify-content:center;
+gap:40px;
+text-align:center;
+}
+
+.stat h2{
+color:#7b2cff;
+}
+
+.cta{
+padding:60px 0;
+text-align:center;
+}
+
+footer{
+text-align:center;
+padding:40px 0;
+background:white;
+}
+
 </style>
+
 </head>
 
 <body>
 
 <header class="navbar">
 <div class="container nav-wrapper">
+
 <div class="logo">SInfluencer</div>
+
 <ul class="nav-links">
-<li><a href="#brand-form">Brands</a></li>
-<li><a href="#creator-form">Creators</a></li>
+<li><a onclick="openBrandForm()">Brands</a></li>
+<li><a onclick="openCreatorForm()">Creators</a></li>
 </ul>
-<a href="#brand-form" class="btn btn-primary">Get Started</a>
+
+<a onclick="openBrandForm()" class="btn btn-primary">Get Started</a>
+
 </div>
 </header>
 
 <section class="hero">
 <div class="container">
+
 <h1>Drive Powerful Creator Marketing</h1>
+
 <p>
 SInfluencer connects brands with digital creators for authentic influencer marketing campaigns.
 </p>
+
 <br>
-<a href="#brand-form" class="btn btn-primary">Start Brand Campaign</a>
-<a href="#creator-form" class="btn-outline">Join As Creator</a>
-</div>
-</section> 
-<!-- VIDEO SECTION -->
 
-<section style="padding:80px 0;text-align:center;background:#f7f7ff">
+<a onclick="openBrandForm()" class="btn btn-primary">Start Brand Campaign</a>
 
-<h2>How Influencer Marketing Works</h2>
-
-<video autoplay muted loop playsinline 
-style="width:280px;height:500px;object-fit:cover;border-radius:20px">
-
-<source src="lv_0_20260306091516.mp4" type="video/mp4">
-
-</video>
-<section style="padding:80px 20px;background:white;text-align:center">
-
-<h2 style="margin-bottom:40px">Creator Marketing in Action</h2>
-
-<div style="display:flex;flex-wrap:wrap;gap:30px;justify-content:center">
-
-<div style="width:260px;background:#fff;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,0.08);overflow:hidden">
-<img src="creator-content.jpg" style="width:100%">
-<h3 style="padding:10px">Authentic Creator Content</h3>
-<p style="padding:0 15px 20px">
-Creators produce real content that connects with audiences and builds trust.
-</p>
-</div>
-
-<div style="width:260px;background:#fff;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,0.08);overflow:hidden">
-<img src="product-review.jpg" style="width:100%">
-<h3 style="padding:10px">Product Reviews</h3>
-<p style="padding:0 15px 20px">
-Influencers showcase products through engaging reviews and videos.
-</p>
-</div>
-
-<div style="width:260px;background:#fff;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,0.08);overflow:hidden">
-<img src="social-promotion.jpg" style="width:100%">
-<h3 style="padding:10px">Social Promotion</h3>
-<p style="padding:0 15px 20px">
-Creators promote brands on Instagram, YouTube and TikTok.
-</p>
-</div>
-
-<div style="width:260px;background:#fff;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,0.08);overflow:hidden">
-<img src="influencer-campaign.jpg" style="width:100%">
-<h3 style="padding:10px">Influencer Campaigns</h3>
-<p style="padding:0 15px 20px">
-Launch powerful campaigns with creators that match your audience.
-</p>
-</div>
-
-<div style="width:260px;background:#fff;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,0.08);overflow:hidden">
-<img src="product-unboxing.jpg" style="width:100%">
-<h3 style="padding:10px">Product Unboxing</h3>
-<p style="padding:0 15px 20px">
-Creators share authentic unboxing experiences to boost engagement.
-</p>
-</div>
+<a onclick="openCreatorForm()" class="btn-outline">Join As Creator</a>
 
 </div>
-
-</section>
 </section>
 
-<section class="role-select">
-<div class="container">
-<h2>Tell us who you are</h2>
-<div class="role-buttons">
-<a href="#brand-form" class="btn btn-primary">I'M A BRAND</a>
-<a href="#creator-form" class="btn-outline">I'M A CREATOR</a>
-</div>
-</div>
-</section>
 
 <!-- BRAND FORM -->
-<section class="form-section" id="brand-form">
-<div class="form-box">
+
+<section class="form-section" id="brand-form" style="display:none;">
+
 <h2>Brand Details</h2>
 
 <form action="https://formspree.io/f/mvzbjjyv" method="POST" id="brandForm">
 
 <input type="text" name="first_name" placeholder="First Name" required>
+
 <input type="text" name="last_name" placeholder="Last Name" required>
+
 <input type="email" name="email" placeholder="Work Email" required>
+
 <input type="tel" name="phone" placeholder="Contact Number (Optional)">
+
 <input type="text" name="company" placeholder="Company Name" required>
+
 <input type="number" name="budget" placeholder="Campaign Budget (₹)" required>
 
 <select name="company_type" required>
-<option value="">Company Type</option>
+<option>Company Type</option>
 <option>Startup</option>
 <option>Agency</option>
 <option>Enterprise</option>
@@ -230,27 +224,34 @@ Creators share authentic unboxing experiences to boost engagement.
 <textarea name="message" rows="4" placeholder="How can we help you?" required></textarea>
 
 <button type="submit">Submit</button>
+
 </form>
 
 <p id="brandSuccess" style="display:none;color:green;font-weight:600;margin-top:15px;">
 Successfully Submitted ✅
 </p>
 
-</div>
 </section>
 
+
 <!-- CREATOR FORM -->
-<section class="form-section" id="creator-form">
-<div class="form-box">
+
+<section class="form-section" id="creator-form" style="display:none;">
+
 <h2>Creator Details</h2>
 
 <form action="https://formspree.io/f/mvzbjjyv" method="POST" id="creatorForm">
 
 <input type="text" name="creator_name" placeholder="Full Name" required>
+
 <input type="email" name="creator_email" placeholder="Email" required>
+
 <input type="tel" name="phone" placeholder="Contact Number (Optional)">
+
 <input type="text" name="platform" placeholder="Primary Platform link (Instagram, YouTube...)" required>
+
 <input type="text" name="followers" placeholder="Followers Count" required>
+
 <input type="number" name="budget" placeholder="Expected Budget (₹)" required>
 
 <textarea name="creator_message" rows="4" placeholder="Tell us about your content" required></textarea>
@@ -263,12 +264,15 @@ Successfully Submitted ✅
 Successfully Submitted ✅
 </p>
 
-</div>
 </section>
 
+
 <!-- FEATURES -->
+
 <section class="features">
+
 <div class="container">
+
 <h2>Why Creators Join SInfluencer</h2>
 
 <div class="features-grid">
@@ -289,11 +293,16 @@ Successfully Submitted ✅
 </div>
 
 </div>
+
 </div>
+
 </section>
 
+
 <!-- STATS -->
+
 <section class="stats">
+
 <div class="container stats-grid">
 
 <div class="stat">
@@ -312,13 +321,18 @@ Successfully Submitted ✅
 </div>
 
 </div>
+
 </section>
 
+
 <!-- CONTACT -->
+
 <section class="cta">
+
 <div class="container">
 
 <h2>Partner With SInfluencer</h2>
+
 <p>For collaborations and partnerships contact us</p>
 
 <p style="font-weight:600;">
@@ -326,19 +340,31 @@ sinfluencersofficial@gmail.com
 </p>
 
 </div>
+
 </section>
 
+
 <footer>
+
 <p><strong>SInfluencer</strong></p>
+
 <p>Creator Marketing Platform</p>
+
 <p>© 2026 SInfluencer. All Rights Reserved.</p>
+
 </footer>
 
+
 <script>
+
 async function handleForm(formId, successId){
+
 const form = document.getElementById(formId);
+
 form.addEventListener("submit", async function(event){
+
 event.preventDefault();
+
 const data = new FormData(form);
 
 const response = await fetch(form.action,{
@@ -351,11 +377,35 @@ if(response.ok){
 form.reset();
 document.getElementById(successId).style.display="block";
 }
+
 });
+
 }
 
 handleForm("brandForm","brandSuccess");
 handleForm("creatorForm","creatorSuccess");
+
+</script>
+
+
+<script>
+
+function openBrandForm() {
+
+document.getElementById("brand-form").style.display = "block";
+
+window.location.href = "#brand-form";
+
+}
+
+function openCreatorForm() {
+
+document.getElementById("creator-form").style.display = "block";
+
+window.location.href = "#creator-form";
+
+}
+
 </script>
 
 </body>
