@@ -10,173 +10,164 @@
 body{
 font-family:Arial, sans-serif;
 margin:0;
-background:#f7f7ff;
-}
-
-.container{
-width:90%;
-max-width:1100px;
-margin:auto;
+background:#f6f6f6;
 }
 
 .navbar{
 background:white;
-padding:20px 0;
-}
-
-.nav-wrapper{
+padding:15px 20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
 }
 
 .logo{
-font-weight:bold;
-font-size:24px;
-color:#7b2cff;
-}
-
-.nav-links{
-list-style:none;
-display:flex;
-gap:20px;
-padding:0;
+font-size:22px;
+font-weight:700;
+color:#8a2be2;
 }
 
 .nav-links a{
+margin:0 10px;
 text-decoration:none;
 color:#333;
+font-weight:500;
+cursor:pointer;
 }
 
 .btn{
+background:linear-gradient(90deg,#7b2ff7,#f107a3);
+color:white;
 padding:12px 25px;
 border-radius:30px;
-border:none;
+text-decoration:none;
+font-weight:600;
 cursor:pointer;
-text-decoration:none;
-}
-
-.btn-primary{
-background:linear-gradient(90deg,#7b2cff,#ff00aa);
-color:white;
-}
-
-.btn-outline{
-border:2px solid #ff00aa;
-color:#ff00aa;
-padding:10px 22px;
-border-radius:30px;
-text-decoration:none;
 }
 
 .hero{
+padding:70px 20px;
 text-align:center;
-padding:80px 0;
-background:#f2e6ff;
+background:#efe7f6;
 }
 
-.hero h1{
-font-size:32px;
+.hero-buttons{
+margin-top:25px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
 }
 
-.form-section{
+.btn-outline{
+border:2px solid #f107a3;
+padding:12px 25px;
+border-radius:30px;
+text-decoration:none;
+color:#f107a3;
+font-weight:600;
+cursor:pointer;
+}
+
+.video-section{
+padding:60px 20px;
+text-align:center;
+background:white;
+}
+
+video{
+width:280px;
+height:500px;
+border-radius:20px;
+object-fit:cover;
+}
+
+.cards{
 padding:60px 20px;
 text-align:center;
 }
 
-.form-section form{
-max-width:500px;
-margin:auto;
+.cards-grid{
 display:flex;
-flex-direction:column;
-gap:15px;
-}
-
-input,select,textarea{
-padding:12px;
-border-radius:8px;
-border:1px solid #ccc;
-}
-
-button{
-padding:12px;
-border:none;
-background:#7b2cff;
-color:white;
-border-radius:8px;
-cursor:pointer;
-}
-
-.features{
-padding:80px 0;
-background:white;
-}
-
-.features-grid{
-display:flex;
-gap:30px;
+gap:20px;
 flex-wrap:wrap;
 justify-content:center;
 }
 
 .card{
+width:260px;
 background:white;
-padding:25px;
 border-radius:15px;
 box-shadow:0 10px 25px rgba(0,0,0,0.08);
-width:260px;
+overflow:hidden;
 }
 
-.stats{
-background:#f2e6ff;
-padding:60px 0;
+.card img{
+width:100%;
 }
 
-.stats-grid{
-display:flex;
-justify-content:center;
-gap:40px;
-text-align:center;
+.card h3{
+padding:10px;
 }
 
-.stat h2{
-color:#7b2cff;
+.card p{
+padding:0 15px 20px;
+font-size:14px;
 }
 
-.cta{
-padding:60px 0;
-text-align:center;
+.form-section{
+display:none;
+padding:40px 20px;
 }
 
-footer{
-text-align:center;
-padding:40px 0;
+.form-box{
 background:white;
+padding:30px;
+border-radius:10px;
+max-width:500px;
+margin:auto;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+input, textarea, select{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:8px;
+border:1px solid #ddd;
+}
+
+button{
+background:linear-gradient(90deg,#7b2ff7,#f107a3);
+border:none;
+color:white;
+padding:12px;
+width:100%;
+border-radius:30px;
+font-weight:600;
+cursor:pointer;
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header class="navbar">
-<div class="container nav-wrapper">
 
 <div class="logo">SInfluencer</div>
 
-<ul class="nav-links">
-<li><a onclick="openBrandForm()">Brands</a></li>
-<li><a onclick="openCreatorForm()">Creators</a></li>
-</ul>
-
-<a onclick="openBrandForm()" class="btn btn-primary">Get Started</a>
-
+<div class="nav-links">
+<a onclick="openBrandForm()">Brands</a>
+<a onclick="openCreatorForm()">Creators</a>
 </div>
+
+<a class="btn" onclick="openBrandForm()">Get Started</a>
+
 </header>
 
 <section class="hero">
-<div class="container">
 
 <h1>Drive Powerful Creator Marketing</h1>
 
@@ -184,23 +175,68 @@ background:white;
 SInfluencer connects brands with digital creators for authentic influencer marketing campaigns.
 </p>
 
-<br>
+<div class="hero-buttons">
 
-<a onclick="openBrandForm()" class="btn btn-primary">Start Brand Campaign</a>
+<a class="btn" onclick="openBrandForm()">Start Brand Campaign</a>
 
-<a onclick="openCreatorForm()" class="btn-outline">Join As Creator</a>
+<a class="btn-outline" onclick="openCreatorForm()">Join As Creator</a>
 
 </div>
+
+</section>
+
+<section class="video-section">
+
+<h2>How Influencer Marketing Works</h2>
+
+<video autoplay muted loop playsinline>
+<source src="lv_0_20260306091516.mp4" type="video/mp4">
+</video>
+
+</section>
+
+<section class="cards">
+
+<h2>Creator Marketing in Action</h2>
+
+<div class="cards-grid">
+
+<div class="card">
+<img src="creator-content.jpg">
+<h3>Authentic Creator Content</h3>
+<p>Creators produce real content that connects with audiences.</p>
+</div>
+
+<div class="card">
+<img src="product-review.jpg">
+<h3>Product Reviews</h3>
+<p>Influencers showcase products through engaging reviews.</p>
+</div>
+
+<div class="card">
+<img src="social-promotion.jpg">
+<h3>Social Promotion</h3>
+<p>Creators promote brands on Instagram, YouTube and TikTok.</p>
+</div>
+
+<div class="card">
+<img src="influencer-campaign.jpg">
+<h3>Campaign Marketing</h3>
+<p>Run large influencer campaigns with multiple creators.</p>
+</div>
+
+</div>
+
 </section>
 
 
-<!-- BRAND FORM -->
+<section id="brand-form" class="form-section">
 
-<section class="form-section" id="brand-form" style="display:none;">
+<div class="form-box">
 
 <h2>Brand Details</h2>
 
-<form action="https://formspree.io/f/mvzbjjyv" method="POST" id="brandForm">
+<form action="https://formspree.io/f/mvzbjjyv" method="POST">
 
 <input type="text" name="first_name" placeholder="First Name" required>
 
@@ -215,7 +251,7 @@ SInfluencer connects brands with digital creators for authentic influencer marke
 <input type="number" name="budget" placeholder="Campaign Budget (₹)" required>
 
 <select name="company_type" required>
-<option>Company Type</option>
+<option value="">Company Type</option>
 <option>Startup</option>
 <option>Agency</option>
 <option>Enterprise</option>
@@ -227,20 +263,18 @@ SInfluencer connects brands with digital creators for authentic influencer marke
 
 </form>
 
-<p id="brandSuccess" style="display:none;color:green;font-weight:600;margin-top:15px;">
-Successfully Submitted ✅
-</p>
+</div>
 
 </section>
 
 
-<!-- CREATOR FORM -->
+<section id="creator-form" class="form-section">
 
-<section class="form-section" id="creator-form" style="display:none;">
+<div class="form-box">
 
 <h2>Creator Details</h2>
 
-<form action="https://formspree.io/f/mvzbjjyv" method="POST" id="creatorForm">
+<form action="https://formspree.io/f/mvzbjjyv" method="POST">
 
 <input type="text" name="creator_name" placeholder="Full Name" required>
 
@@ -248,7 +282,7 @@ Successfully Submitted ✅
 
 <input type="tel" name="phone" placeholder="Contact Number (Optional)">
 
-<input type="text" name="platform" placeholder="Primary Platform link (Instagram, YouTube...)" required>
+<input type="text" name="platform" placeholder="Primary Platform Link" required>
 
 <input type="text" name="followers" placeholder="Followers Count" required>
 
@@ -260,149 +294,27 @@ Successfully Submitted ✅
 
 </form>
 
-<p id="creatorSuccess" style="display:none;color:green;font-weight:600;margin-top:15px;">
-Successfully Submitted ✅
-</p>
-
-</section>
-
-
-<!-- FEATURES -->
-
-<section class="features">
-
-<div class="container">
-
-<h2>Why Creators Join SInfluencer</h2>
-
-<div class="features-grid">
-
-<div class="card">
-<h3>Brand Collaborations</h3>
-<p>Get discovered by brands and collaborate on marketing campaigns.</p>
-</div>
-
-<div class="card">
-<h3>Paid Campaigns</h3>
-<p>Work with brands and earn through influencer promotions.</p>
-</div>
-
-<div class="card">
-<h3>Grow Your Audience</h3>
-<p>Expand your reach by working with multiple brands.</p>
-</div>
-
-</div>
-
 </div>
 
 </section>
-
-
-<!-- STATS -->
-
-<section class="stats">
-
-<div class="container stats-grid">
-
-<div class="stat">
-<h2>500+</h2>
-<p>Creators Joined</p>
-</div>
-
-<div class="stat">
-<h2>50+</h2>
-<p>Brands Interested</p>
-</div>
-
-<div class="stat">
-<h2>10M+</h2>
-<p>Total Audience Reach</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="cta">
-
-<div class="container">
-
-<h2>Partner With SInfluencer</h2>
-
-<p>For collaborations and partnerships contact us</p>
-
-<p style="font-weight:600;">
-sinfluencersofficial@gmail.com
-</p>
-
-</div>
-
-</section>
-
-
-<footer>
-
-<p><strong>SInfluencer</strong></p>
-
-<p>Creator Marketing Platform</p>
-
-<p>© 2026 SInfluencer. All Rights Reserved.</p>
-
-</footer>
-
 
 <script>
 
-async function handleForm(formId, successId){
+function openBrandForm(){
 
-const form = document.getElementById(formId);
+document.getElementById("brand-form").style.display="block";
+document.getElementById("creator-form").style.display="none";
 
-form.addEventListener("submit", async function(event){
-
-event.preventDefault();
-
-const data = new FormData(form);
-
-const response = await fetch(form.action,{
-method:form.method,
-body:data,
-headers:{'Accept':'application/json'}
-});
-
-if(response.ok){
-form.reset();
-document.getElementById(successId).style.display="block";
-}
-
-});
+window.location.href="#brand-form";
 
 }
 
-handleForm("brandForm","brandSuccess");
-handleForm("creatorForm","creatorSuccess");
+function openCreatorForm(){
 
-</script>
+document.getElementById("creator-form").style.display="block";
+document.getElementById("brand-form").style.display="none";
 
-
-<script>
-
-function openBrandForm() {
-
-document.getElementById("brand-form").style.display = "block";
-
-window.location.href = "#brand-form";
-
-}
-
-function openCreatorForm() {
-
-document.getElementById("creator-form").style.display = "block";
-
-window.location.href = "#creator-form";
+window.location.href="#creator-form";
 
 }
 
