@@ -101,10 +101,21 @@ background:white;
 border-radius:15px;
 box-shadow:0 10px 25px rgba(0,0,0,0.08);
 overflow:hidden;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
 }
 
 .card img{
 width:100%;
+transition:0.3s;
+}
+
+.card:hover img{
+transform:scale(1.05);
 }
 
 .card h3{
@@ -189,7 +200,7 @@ SInfluencer connects brands with digital creators for authentic influencer marke
 
 <h2>How Influencer Marketing Works</h2>
 
-<video autoplay muted loop playsinline>
+<video controls autoplay loop playsinline>
 <source src="lv_0_20260306091516.mp4" type="video/mp4">
 </video>
 
